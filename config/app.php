@@ -284,6 +284,7 @@ return [
             'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
+            'ssl_ca'=> "/etc/ssl/certs/ca-certificates.crt",
 
             /*
              * Set identifier quoting to true if you are using reserved words or
