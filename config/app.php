@@ -273,8 +273,8 @@ return [
             /*
              * It is recommended to set these options through your environment or app_local.php
              */
-            'username' => 'bnp0j4hfg7wr',
-            'password' => 'pscale_pw_rIc4IoqbduZrFPP2Kmuk03aG-mn2KTd4ih4vnE3fs9Y',
+            'username' => env('Username',null),
+            'password' => env('Password',null),
             'database' => 'p_tecnica',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
