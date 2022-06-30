@@ -398,6 +398,7 @@ fieldset legend {
     float: right;
     text-transform: uppercase;
     box-shadow: none;
+    
 }
 
 .form button:hover, .form button:focus {
@@ -521,4 +522,13 @@ div.message.hidden {
 table td {
     vertical-align: top;
     word-break: break-all;
+}
+
+.card{
+    border: 1px solid #000000;
+    height: 50%;
+}
+.login{
+    text-align: -webkit-center;
+    height: 100%
 }

@@ -23,7 +23,7 @@ use Cake\Event\Event;
  * Add your application-wide methods in the class below, your controllers
  * will inherit them.
  *
- * @link https://book.cakephp.org/3/en/controllers.html#the-app-controller
+ * @link https://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller
 {
@@ -46,10 +46,50 @@ class AppController extends Controller
         ]);
         $this->loadComponent('Flash');
 
+        $this->loadComponent('Auth',[
+            'authorize' => ['controller'],
+            'authenticate'=> [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password'
+                    ],
+                'finder'=> 'Auth'
+                ]
+            ],
+            'loginAction'=>[
+                'controller'=>'Users',
+                'action' => 'login'
+            ],
+            'authError' => 'Permission denied',
+            'loginRedirect' => [
+                'controller'=>'Users',
+                'action'=> 'index'
+            ],            
+            'logoutRedirect' => [
+                'controller'=>'Users',
+                'action'=>'login'
+            ],
+            'unauthorizedRedirect' => $this->referer()
+        ]);
+
         /*
          * Enable the following component for recommended CakePHP security settings.
-         * see https://book.cakephp.org/3/en/controllers/components/security.html
+         * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
         //$this->loadComponent('Security');
+    }
+
+    public function beforeFilter(Event $event){
+
+        $this->set('current_user',$this->Auth->user());
+    }
+
+    public function isAuthorized($user) {
+        if(isset($user['role']) and $user['role'] == 1){
+            return true;
+        }
+
+        return false;
     }
 }
