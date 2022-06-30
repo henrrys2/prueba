@@ -263,7 +263,7 @@ return [
             'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
-            'host' => 'localhost',
+            'host' => 'rdwkhnwc1358.us-east-3.psdb.cloud',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
@@ -273,8 +273,8 @@ return [
             /*
              * It is recommended to set these options through your environment or app_local.php
              */
-            'username' => 'root',
-            'password' => '',
+            'username' => 'bnp0j4hfg7wr',
+            'password' => 'pscale_pw_rIc4IoqbduZrFPP2Kmuk03aG-mn2KTd4ih4vnE3fs9Y',
             'database' => 'p_tecnica',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
@@ -314,11 +314,11 @@ return [
             'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
-            'host' => 'localhost',
+            'host' => 'rdwkhnwc1358.us-east-3.psdb.cloud',
             //'port' => 'non_standard_port_number',
-            'username' => 'my_app',
-            'password' => 'secret',
-            'database' => 'test_myapp',
+            'username' => 'bnp0j4hfg7wr',
+            'password' => 'pscale_pw_rIc4IoqbduZrFPP2Kmuk03aG-mn2KTd4ih4vnE3fs9Y',
+            'database' => 'p_tecnica',
             //'encoding' => 'utf8mb4',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
